@@ -41,7 +41,6 @@ The design supports variable-length packets, CRC validation, metadata extraction
 ## Repository Structure
 
 ```text
-```text
 FPGA-Packet-Parser/
 ├── README.md
 ├── rtl/
@@ -67,9 +66,6 @@ FPGA-Packet-Parser/
 │   └── regression_results.txt
 └── .gitignore
 ```
-
-```
-
 ## RTL Design
 
 The RTL packet parser receives packet data as an 8-bit byte stream using a valid/ready handshake. The parser detects the start-of-frame byte, captures the packet header, validates the payload length, computes and compares CRC16, and outputs decoded metadata.
