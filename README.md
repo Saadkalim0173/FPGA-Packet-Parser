@@ -41,7 +41,9 @@ The design supports variable-length packets, CRC validation, metadata extraction
 ## Repository Structure
 
 ```text
-packet-parser-uvm/
+```text
+FPGA-Packet-Parser/
+├── README.md
 ├── rtl/
 │   ├── packet_pkg.sv
 │   ├── crc16.sv
@@ -61,7 +63,11 @@ packet-parser-uvm/
 │   └── tb_top.sv
 ├── sim/
 │   └── run_sim.do
-└── README.md
+├── docs/
+│   └── regression_results.txt
+└── .gitignore
+```
+
 ```
 
 ## RTL Design
