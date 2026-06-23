@@ -1,0 +1,654 @@
+couldn't open "transcript": permission denied
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2023.3 win64 Jul 17 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading project fpga_packet_parser
+cd C:/packet_parser_project/sim
+# reading C:/intelFPGA/23.1std/questa_fse/win64/../modelsim.ini
+# couldn't change working directory to "C:/packet_parser_project/sim": no such file or directory
+cd C:/Users/saad/OneDrive/Desktop/packet_parser_project/sim
+# couldn't change working directory to "C:/Users/saad/OneDrive/Desktop/packet_parser_project/sim": no such file or directory
+cd C:\Users\saadk\OneDrive\Desktop\packet_parser_project
+# couldn't change working directory to "C:UserssaadkOneDriveDesktoppacket_parser_project": no such file or directory
+cd C:/Users/saadk/OneDrive/Desktop/packet_parser_project/sim
+pwd
+# C:/Users/saadk/OneDrive/Desktop/packet_parser_project/sim
+vlib work
+echo $env(UVM_HOME)
+# can't read "env(UVM_HOME)": no such variable
+echo $env(MODEL_TECH)
+# C:/intelFPGA/23.1std/questa_fse/win64
+ls C:/intelFPGA/23.1std/questa_fse/verilog_src
+# 
+# C:/intelFPGA/23.1std/questa_fse/verilog_src:
+# adms_vlams  ovm-2.1.2           uvm-1.1c                    
+# avm         questa_uvm_pkg-1.2  uvm-1.1d                    
+# dpi_cpack   rnm_pkg             uvm-1.2                     
+# flcov_ce    std                 uvm_reg-1.1                 
+# infact_src  std_ovl             uvmc-2.3.2                  
+# mti_sv      sva_checkers        verilog_psl_checkers        
+# ovm-2.1.1   upf_pack            vlog_waveform_edit_package  
+set env(UVM_HOME) "C:/intelFPGA/23.1std/questa_fse/verilog_src/uvm-1.2"
+# C:/intelFPGA/23.1std/questa_fse/verilog_src/uvm-1.2
+echo $env(UVM_HOME)
+# C:/intelFPGA/23.1std/questa_fse/verilog_src/uvm-1.2
+ls C:/intelFPGA/23.1std/questa_fse/verilog_src/uvm-1.2/src
+# 
+# C:/intelFPGA/23.1std/questa_fse/verilog_src/uvm-1.2/src:
+# base   deprecated  reg   tlm2            uvm_pkg.sv  
+# comps  dpi         seq   uvm.sv                      
+# dap    macros      tlm1  uvm_macros.svh              
+pwd
+# C:/Users/saadk/OneDrive/Desktop/packet_parser_project/sim
+vlib work
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+vlog -sv../rtl/packet_pkg.sv
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# ** Error (suppressible): (vlog-1902) Option "-sv../rtl/packet_pkg.sv" is not a valid option for this tool.
+# Use the -help option for complete vlog usage.
+# Errors: 1, Warnings: 0
+# C:/intelFPGA/23.1std/questa_fse/win64/vlog failed.
+vlog -sv ../rtl/packet_pkg.sv
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 10:47:13 on Jun 20,2026
+# vlog -reportprogress 300 -sv ../rtl/packet_pkg.sv 
+# -- Compiling package packet_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 10:47:13 on Jun 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -sv ../rtl/crc16.sv
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 10:47:57 on Jun 20,2026
+# vlog -reportprogress 300 -sv ../rtl/crc16.sv 
+# -- Compiling package crc16_sv_unit
+# -- Importing package packet_pkg
+# -- Compiling module crc16
+# 
+# Top level modules:
+# 	crc16
+# End time: 10:47:58 on Jun 20,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vlog -sv ../rtl/packet_parser.sv
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 10:48:31 on Jun 20,2026
+# vlog -reportprogress 300 -sv ../rtl/packet_parser.sv 
+# -- Compiling package packet_parser_sv_unit
+# -- Importing package packet_pkg
+# -- Compiling module packet_parser
+# 
+# Top level modules:
+# 	packet_parser
+# End time: 10:48:31 on Jun 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -sv ../rtl/packet_parser_sva.sv
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 10:48:59 on Jun 20,2026
+# vlog -reportprogress 300 -sv ../rtl/packet_parser_sva.sv 
+# ** Error: (vlog-13069) ../rtl/packet_parser_sva.sv(24): near "=>": syntax error, unexpected =>.
+# ** Error: (vlog-13069) ../rtl/packet_parser_sva.sv(44): near "->": syntax error, unexpected -> .
+# ** Error: (vlog-13069) ../rtl/packet_parser_sva.sv(64): near "=>": syntax error, unexpected =>.
+# ** Error: (vlog-13069) ../rtl/packet_parser_sva.sv(70): near "##": syntax error, unexpected ##.
+# ** Error: (vlog-13069) ../rtl/packet_parser_sva.sv(88): near "->": syntax error, unexpected -> .
+# ** Error: (vlog-13069) ../rtl/packet_parser_sva.sv(94): near "->": syntax error, unexpected -> .
+# ** Error: (vlog-13069) ../rtl/packet_parser_sva.sv(100): near "->": syntax error, unexpected -> .
+# ** Error: (vlog-13069) ../rtl/packet_parser_sva.sv(106): near "->": syntax error, unexpected -> .
+# ** Error: (vlog-13069) ../rtl/packet_parser_sva.sv(112): near "->": syntax error, unexpected -> .
+# ** Error: (vlog-13069) ../rtl/packet_parser_sva.sv(124): near "posedge": syntax error, unexpected posedge.
+# ** Error: (vlog-13069) ../rtl/packet_parser_sva.sv(130): near "posedge": syntax error, unexpected posedge.
+# ** Error: (vlog-13069) ../rtl/packet_parser_sva.sv(144): near "=>": syntax error, unexpected =>.
+# ** Error: (vlog-13069) ../rtl/packet_parser_sva.sv(174): near "propety": syntax error, unexpected IDENTIFIER, expecting '#'.
+# ** Error: (vlog-13069) ../rtl/packet_parser_sva.sv(180): near "propety": syntax error, unexpected IDENTIFIER, expecting '#'.
+# End time: 10:48:59 on Jun 20,2026, Elapsed time: 0:00:00
+# Errors: 14, Warnings: 0
+# C:/intelFPGA/23.1std/questa_fse/win64/vlog failed.
+vlog -sv -mfcu ../rtl/packet_parser_sva.sv
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 10:50:31 on Jun 20,2026
+# vlog -reportprogress 300 -sv -mfcu ../rtl/packet_parser_sva.sv 
+# ** Error: (vlog-13069) ../rtl/packet_parser_sva.sv(24): near "=>": syntax error, unexpected =>.
+# ** Error: (vlog-13069) ../rtl/packet_parser_sva.sv(44): near "->": syntax error, unexpected -> .
+# ** Error: (vlog-13069) ../rtl/packet_parser_sva.sv(64): near "=>": syntax error, unexpected =>.
+# ** Error: (vlog-13069) ../rtl/packet_parser_sva.sv(70): near "##": syntax error, unexpected ##.
+# ** Error: (vlog-13069) ../rtl/packet_parser_sva.sv(88): near "->": syntax error, unexpected -> .
+# ** Error: (vlog-13069) ../rtl/packet_parser_sva.sv(94): near "->": syntax error, unexpected -> .
+# ** Error: (vlog-13069) ../rtl/packet_parser_sva.sv(100): near "->": syntax error, unexpected -> .
+# ** Error: (vlog-13069) ../rtl/packet_parser_sva.sv(106): near "->": syntax error, unexpected -> .
+# ** Error: (vlog-13069) ../rtl/packet_parser_sva.sv(112): near "->": syntax error, unexpected -> .
+# ** Error: (vlog-13069) ../rtl/packet_parser_sva.sv(124): near "posedge": syntax error, unexpected posedge.
+# ** Error: (vlog-13069) ../rtl/packet_parser_sva.sv(130): near "posedge": syntax error, unexpected posedge.
+# ** Error: (vlog-13069) ../rtl/packet_parser_sva.sv(144): near "=>": syntax error, unexpected =>.
+# ** Error: (vlog-13069) ../rtl/packet_parser_sva.sv(174): near "propety": syntax error, unexpected IDENTIFIER, expecting '#'.
+# ** Error: (vlog-13069) ../rtl/packet_parser_sva.sv(180): near "propety": syntax error, unexpected IDENTIFIER, expecting '#'.
+# End time: 10:50:31 on Jun 20,2026, Elapsed time: 0:00:00
+# Errors: 14, Warnings: 0
+# C:/intelFPGA/23.1std/questa_fse/win64/vlog failed.
+vlog -sv -svlines ../rtl/packet_parser_sva.sv
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# ** Error (suppressible): (vlog-1902) Option "-svlines" is not a valid option for this tool.
+# Use the -help option for complete vlog usage.
+# Errors: 1, Warnings: 0
+# C:/intelFPGA/23.1std/questa_fse/win64/vlog failed.
+vlog -sv +incdir+$env(UVM_HOME)/src $env(UVM_HOME)/src/uvm_pkg.sv
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 10:53:06 on Jun 20,2026
+# vlog -reportprogress 300 -sv "+incdir+C:/intelFPGA/23.1std/questa_fse/verilog_src/uvm-1.2/src" C:/intelFPGA/23.1std/questa_fse/verilog_src/uvm-1.2/src/uvm_pkg.sv 
+# -- Compiling package uvm_pkg (uvm-1.2 Built-in)
+# 
+# Top level modules:
+# 	--none--
+# End time: 10:53:10 on Jun 20,2026, Elapsed time: 0:00:04
+# Errors: 0, Warnings: 0
+vlog -sv +incdir+$env(UVM_HOME)/src ../tb/parser_interface.sv
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 16:47:59 on Jun 20,2026
+# vlog -reportprogress 300 -sv "+incdir+C:/intelFPGA/23.1std/questa_fse/verilog_src/uvm-1.2/src" ../tb/parser_interface.sv 
+# ** Error: ../tb/parser_interface.sv(32): (vlog-2143) Unable to find 'parse_errpr' in scope parser_interface.
+# End time: 16:47:59 on Jun 20,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# C:/intelFPGA/23.1std/questa_fse/win64/vlog failed.
+vlog -sv +incdir+$env(UVM_HOME)/src ../tb/parser_interface.sv
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 16:51:58 on Jun 20,2026
+# vlog -reportprogress 300 -sv "+incdir+C:/intelFPGA/23.1std/questa_fse/verilog_src/uvm-1.2/src" ../tb/parser_interface.sv 
+# -- Compiling package parser_interface_sv_unit
+# -- Importing package packet_pkg
+# -- Compiling interface parser_interface
+# 
+# Top level modules:
+# 	--none--
+# End time: 16:51:58 on Jun 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -sv +incdir+$env(UVM_HOME)/src ../tb/pkt_seq_item.sv
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 16:52:59 on Jun 20,2026
+# vlog -reportprogress 300 -sv "+incdir+C:/intelFPGA/23.1std/questa_fse/verilog_src/uvm-1.2/src" ../tb/pkt_seq_item.sv 
+# ** Error: (vlog-13053) ../tb/pkt_seq_item.sv(3): near "'i": Illegal base specifier in numeric constant.
+# ** Error: (vlog-13069) ../tb/pkt_seq_item.sv(3): near "'i": syntax error, unexpected BASE.
+# End time: 16:52:59 on Jun 20,2026, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# C:/intelFPGA/23.1std/questa_fse/win64/vlog failed.
+# vlog -reportprogress 300 -sv "+incdir+C:/intelFPGA/23.1std/questa_fse/verilog_src/uvm-1.2/src" ../tb/pkt_seq_item.sv 
+
+
+# vlog -reportprogress 300 -sv "+incdir+C:/intelFPGA/23.1std/questa_fse/verilog_src/uvm-1.2/src" ../tb/pkt_seq_item.sv
+vlog -reportprogress 300 -sv "+incdir+C:/intelFPGA/23.1std/questa_fse/verilog_src/uvm-1.2/src" ../tb/pkt_seq_item.sv 
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 16:55:46 on Jun 20,2026
+# vlog -reportprogress 300 -sv "+incdir+C:/intelFPGA/23.1std/questa_fse/verilog_src/uvm-1.2/src" ../tb/pkt_seq_item.sv 
+# ** Error: (vlog-13053) ../tb/pkt_seq_item.sv(7): near "'i": Illegal base specifier in numeric constant.
+# ** Error: (vlog-13069) ../tb/pkt_seq_item.sv(7): near "'i": syntax error, unexpected BASE.
+# End time: 16:55:46 on Jun 20,2026, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# C:/intelFPGA/23.1std/questa_fse/win64/vlog failed.
+vlog -reportprogress 300 -sv "+incdir+C:/intelFPGA/23.1std/questa_fse/verilog_src/uvm-1.2/src" ../tb/pkt_seq_item.sv
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 16:56:48 on Jun 20,2026
+# vlog -reportprogress 300 -sv "+incdir+C:/intelFPGA/23.1std/questa_fse/verilog_src/uvm-1.2/src" ../tb/pkt_seq_item.sv 
+# ** Error: (vlog-13053) ../tb/pkt_seq_item.sv(11): near "'u": Illegal base specifier in numeric constant.
+# ** Error: (vlog-13069) ../tb/pkt_seq_item.sv(11): near "'u": syntax error, unexpected BASE, expecting function or task or   .
+# End time: 16:56:48 on Jun 20,2026, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# C:/intelFPGA/23.1std/questa_fse/win64/vlog failed.
+vlog -sv "+incdir+C:/intelFPGA/23.1std/questa_fse/verilog_src/uvm-1.2/src" ../tb/pkt_seq_item.sv
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 17:10:21 on Jun 20,2026
+# vlog -reportprogress 300 -sv "+incdir+C:/intelFPGA/23.1std/questa_fse/verilog_src/uvm-1.2/src" ../tb/pkt_seq_item.sv 
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(12)
+# ** at ../tb/pkt_seq_item.sv(12): (vlog-2730) Undefined variable: 'pkt_type'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(12)
+# ** at ../tb/pkt_seq_item.sv(12): (vlog-2730) Undefined variable: 'pkt_type'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(12)
+# ** at ../tb/pkt_seq_item.sv(12): (vlog-2730) Undefined variable: 'pkt_type'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(12)
+# ** at ../tb/pkt_seq_item.sv(12): (vlog-2730) Undefined variable: 'pkt_type'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(12)
+# ** at ../tb/pkt_seq_item.sv(12): (vlog-2730) Undefined variable: 'pkt_type'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(12)
+# ** at ../tb/pkt_seq_item.sv(12): (vlog-2730) Undefined variable: 'pkt_type'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(12)
+# ** at ../tb/pkt_seq_item.sv(12): (vlog-2730) Undefined variable: 'pkt_type'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(13)
+# ** at ../tb/pkt_seq_item.sv(13): (vlog-2730) Undefined variable: 'payload_len'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(13)
+# ** at ../tb/pkt_seq_item.sv(13): (vlog-2730) Undefined variable: 'payload_len'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(13)
+# ** at ../tb/pkt_seq_item.sv(13): (vlog-2730) Undefined variable: 'payload_len'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(13)
+# ** at ../tb/pkt_seq_item.sv(13): (vlog-2730) Undefined variable: 'payload_len'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(13)
+# ** at ../tb/pkt_seq_item.sv(13): (vlog-2730) Undefined variable: 'payload_len'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(13)
+# ** at ../tb/pkt_seq_item.sv(13): (vlog-2730) Undefined variable: 'payload_len'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(13)
+# ** at ../tb/pkt_seq_item.sv(13): (vlog-2730) Undefined variable: 'payload_len'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(14)
+# ** at ../tb/pkt_seq_item.sv(14): (vlog-2730) Undefined variable: 'src_id'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(14)
+# ** at ../tb/pkt_seq_item.sv(14): (vlog-2730) Undefined variable: 'src_id'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(14)
+# ** at ../tb/pkt_seq_item.sv(14): (vlog-2730) Undefined variable: 'src_id'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(14)
+# ** at ../tb/pkt_seq_item.sv(14): (vlog-2730) Undefined variable: 'src_id'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(14)
+# ** at ../tb/pkt_seq_item.sv(14): (vlog-2730) Undefined variable: 'src_id'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(14)
+# ** at ../tb/pkt_seq_item.sv(14): (vlog-2730) Undefined variable: 'src_id'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(14)
+# ** at ../tb/pkt_seq_item.sv(14): (vlog-2730) Undefined variable: 'src_id'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(15)
+# ** at ../tb/pkt_seq_item.sv(15): (vlog-2730) Undefined variable: 'dst_id'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(15)
+# ** at ../tb/pkt_seq_item.sv(15): (vlog-2730) Undefined variable: 'dst_id'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(15)
+# ** at ../tb/pkt_seq_item.sv(15): (vlog-2730) Undefined variable: 'dst_id'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(15)
+# ** at ../tb/pkt_seq_item.sv(15): (vlog-2730) Undefined variable: 'dst_id'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(15)
+# ** at ../tb/pkt_seq_item.sv(15): (vlog-2730) Undefined variable: 'dst_id'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(15)
+# ** at ../tb/pkt_seq_item.sv(15): (vlog-2730) Undefined variable: 'dst_id'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(15)
+# ** at ../tb/pkt_seq_item.sv(15): (vlog-2730) Undefined variable: 'dst_id'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(16)
+# ** at ../tb/pkt_seq_item.sv(16): (vlog-2730) Undefined variable: 'seq_num'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(16)
+# ** at ../tb/pkt_seq_item.sv(16): (vlog-2730) Undefined variable: 'seq_num'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(16)
+# ** at ../tb/pkt_seq_item.sv(16): (vlog-2730) Undefined variable: 'seq_num'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(16)
+# ** at ../tb/pkt_seq_item.sv(16): (vlog-2730) Undefined variable: 'seq_num'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(16)
+# ** at ../tb/pkt_seq_item.sv(16): (vlog-2730) Undefined variable: 'seq_num'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(16)
+# ** at ../tb/pkt_seq_item.sv(16): (vlog-2730) Undefined variable: 'seq_num'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(16)
+# ** at ../tb/pkt_seq_item.sv(16): (vlog-2730) Undefined variable: 'seq_num'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(17)
+# ** at ../tb/pkt_seq_item.sv(17): (vlog-2730) Undefined variable: 'inject_crc_error'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(17)
+# ** at ../tb/pkt_seq_item.sv(17): (vlog-2730) Undefined variable: 'inject_crc_error'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(17)
+# ** at ../tb/pkt_seq_item.sv(17): (vlog-2730) Undefined variable: 'inject_crc_error'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(17)
+# ** at ../tb/pkt_seq_item.sv(17): (vlog-2730) Undefined variable: 'inject_crc_error'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(17)
+# ** at ../tb/pkt_seq_item.sv(17): (vlog-2730) Undefined variable: 'inject_crc_error'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(17)
+# ** at ../tb/pkt_seq_item.sv(17): (vlog-2730) Undefined variable: 'inject_crc_error'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(17)
+# ** at ../tb/pkt_seq_item.sv(17): (vlog-2730) Undefined variable: 'inject_crc_error'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(18)
+# ** at ../tb/pkt_seq_item.sv(18): (vlog-2730) Undefined variable: 'inject_bad_sof'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(18)
+# ** at ../tb/pkt_seq_item.sv(18): (vlog-2730) Undefined variable: 'inject_bad_sof'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(18)
+# ** at ../tb/pkt_seq_item.sv(18): (vlog-2730) Undefined variable: 'inject_bad_sof'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(18)
+# ** at ../tb/pkt_seq_item.sv(18): (vlog-2730) Undefined variable: 'inject_bad_sof'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(18)
+# ** at ../tb/pkt_seq_item.sv(18): (vlog-2730) Undefined variable: 'inject_bad_sof'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(18)
+# ** at ../tb/pkt_seq_item.sv(18): (vlog-2730) Undefined variable: 'inject_bad_sof'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(18)
+# ** at ../tb/pkt_seq_item.sv(18): (vlog-2730) Undefined variable: 'inject_bad_sof'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(19)
+# ** at ../tb/pkt_seq_item.sv(19): (vlog-2730) Undefined variable: 'inject_bad_len'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(19)
+# ** at ../tb/pkt_seq_item.sv(19): (vlog-2730) Undefined variable: 'inject_bad_len'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(19)
+# ** at ../tb/pkt_seq_item.sv(19): (vlog-2730) Undefined variable: 'inject_bad_len'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(19)
+# ** at ../tb/pkt_seq_item.sv(19): (vlog-2730) Undefined variable: 'inject_bad_len'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(19)
+# ** at ../tb/pkt_seq_item.sv(19): (vlog-2730) Undefined variable: 'inject_bad_len'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(19)
+# ** at ../tb/pkt_seq_item.sv(19): (vlog-2730) Undefined variable: 'inject_bad_len'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(19)
+# ** at ../tb/pkt_seq_item.sv(19): (vlog-2730) Undefined variable: 'inject_bad_len'.
+# End time: 17:10:22 on Jun 20,2026, Elapsed time: 0:00:01
+# Errors: 56, Warnings: 0
+# C:/intelFPGA/23.1std/questa_fse/win64/vlog failed.
+vlog -sv +incdir+$env(UVM_HOME)/src ../tb/pkt_seq_item.sv ../tb/pkt_driver.sv ../tb/pkt_monitor.sv ../tb/pkt_scoreboard.sv ../tb/pkt_agent.sv ../tb/pkt_env.sv ../tb/pkt_sequences.sv ../tb/pkt_coverage.sv ../tb/pkt_test.sv ../tb/tb_top.sv
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 17:11:15 on Jun 20,2026
+# vlog -reportprogress 300 -sv "+incdir+C:/intelFPGA/23.1std/questa_fse/verilog_src/uvm-1.2/src" ../tb/pkt_seq_item.sv ../tb/pkt_driver.sv ../tb/pkt_monitor.sv ../tb/pkt_scoreboard.sv ../tb/pkt_agent.sv ../tb/pkt_env.sv ../tb/pkt_sequences.sv ../tb/pkt_coverage.sv ../tb/pkt_test.sv ../tb/tb_top.sv 
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(12)
+# ** at ../tb/pkt_seq_item.sv(12): (vlog-2730) Undefined variable: 'pkt_type'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(12)
+# ** at ../tb/pkt_seq_item.sv(12): (vlog-2730) Undefined variable: 'pkt_type'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(12)
+# ** at ../tb/pkt_seq_item.sv(12): (vlog-2730) Undefined variable: 'pkt_type'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(12)
+# ** at ../tb/pkt_seq_item.sv(12): (vlog-2730) Undefined variable: 'pkt_type'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(12)
+# ** at ../tb/pkt_seq_item.sv(12): (vlog-2730) Undefined variable: 'pkt_type'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(12)
+# ** at ../tb/pkt_seq_item.sv(12): (vlog-2730) Undefined variable: 'pkt_type'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(12)
+# ** at ../tb/pkt_seq_item.sv(12): (vlog-2730) Undefined variable: 'pkt_type'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(13)
+# ** at ../tb/pkt_seq_item.sv(13): (vlog-2730) Undefined variable: 'payload_len'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(13)
+# ** at ../tb/pkt_seq_item.sv(13): (vlog-2730) Undefined variable: 'payload_len'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(13)
+# ** at ../tb/pkt_seq_item.sv(13): (vlog-2730) Undefined variable: 'payload_len'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(13)
+# ** at ../tb/pkt_seq_item.sv(13): (vlog-2730) Undefined variable: 'payload_len'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(13)
+# ** at ../tb/pkt_seq_item.sv(13): (vlog-2730) Undefined variable: 'payload_len'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(13)
+# ** at ../tb/pkt_seq_item.sv(13): (vlog-2730) Undefined variable: 'payload_len'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(13)
+# ** at ../tb/pkt_seq_item.sv(13): (vlog-2730) Undefined variable: 'payload_len'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(14)
+# ** at ../tb/pkt_seq_item.sv(14): (vlog-2730) Undefined variable: 'src_id'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(14)
+# ** at ../tb/pkt_seq_item.sv(14): (vlog-2730) Undefined variable: 'src_id'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(14)
+# ** at ../tb/pkt_seq_item.sv(14): (vlog-2730) Undefined variable: 'src_id'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(14)
+# ** at ../tb/pkt_seq_item.sv(14): (vlog-2730) Undefined variable: 'src_id'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(14)
+# ** at ../tb/pkt_seq_item.sv(14): (vlog-2730) Undefined variable: 'src_id'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(14)
+# ** at ../tb/pkt_seq_item.sv(14): (vlog-2730) Undefined variable: 'src_id'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(14)
+# ** at ../tb/pkt_seq_item.sv(14): (vlog-2730) Undefined variable: 'src_id'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(15)
+# ** at ../tb/pkt_seq_item.sv(15): (vlog-2730) Undefined variable: 'dst_id'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(15)
+# ** at ../tb/pkt_seq_item.sv(15): (vlog-2730) Undefined variable: 'dst_id'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(15)
+# ** at ../tb/pkt_seq_item.sv(15): (vlog-2730) Undefined variable: 'dst_id'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(15)
+# ** at ../tb/pkt_seq_item.sv(15): (vlog-2730) Undefined variable: 'dst_id'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(15)
+# ** at ../tb/pkt_seq_item.sv(15): (vlog-2730) Undefined variable: 'dst_id'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(15)
+# ** at ../tb/pkt_seq_item.sv(15): (vlog-2730) Undefined variable: 'dst_id'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(15)
+# ** at ../tb/pkt_seq_item.sv(15): (vlog-2730) Undefined variable: 'dst_id'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(16)
+# ** at ../tb/pkt_seq_item.sv(16): (vlog-2730) Undefined variable: 'seq_num'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(16)
+# ** at ../tb/pkt_seq_item.sv(16): (vlog-2730) Undefined variable: 'seq_num'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(16)
+# ** at ../tb/pkt_seq_item.sv(16): (vlog-2730) Undefined variable: 'seq_num'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(16)
+# ** at ../tb/pkt_seq_item.sv(16): (vlog-2730) Undefined variable: 'seq_num'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(16)
+# ** at ../tb/pkt_seq_item.sv(16): (vlog-2730) Undefined variable: 'seq_num'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(16)
+# ** at ../tb/pkt_seq_item.sv(16): (vlog-2730) Undefined variable: 'seq_num'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(16)
+# ** at ../tb/pkt_seq_item.sv(16): (vlog-2730) Undefined variable: 'seq_num'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(17)
+# ** at ../tb/pkt_seq_item.sv(17): (vlog-2730) Undefined variable: 'inject_crc_error'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(17)
+# ** at ../tb/pkt_seq_item.sv(17): (vlog-2730) Undefined variable: 'inject_crc_error'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(17)
+# ** at ../tb/pkt_seq_item.sv(17): (vlog-2730) Undefined variable: 'inject_crc_error'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(17)
+# ** at ../tb/pkt_seq_item.sv(17): (vlog-2730) Undefined variable: 'inject_crc_error'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(17)
+# ** at ../tb/pkt_seq_item.sv(17): (vlog-2730) Undefined variable: 'inject_crc_error'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(17)
+# ** at ../tb/pkt_seq_item.sv(17): (vlog-2730) Undefined variable: 'inject_crc_error'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(17)
+# ** at ../tb/pkt_seq_item.sv(17): (vlog-2730) Undefined variable: 'inject_crc_error'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(18)
+# ** at ../tb/pkt_seq_item.sv(18): (vlog-2730) Undefined variable: 'inject_bad_sof'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(18)
+# ** at ../tb/pkt_seq_item.sv(18): (vlog-2730) Undefined variable: 'inject_bad_sof'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(18)
+# ** at ../tb/pkt_seq_item.sv(18): (vlog-2730) Undefined variable: 'inject_bad_sof'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(18)
+# ** at ../tb/pkt_seq_item.sv(18): (vlog-2730) Undefined variable: 'inject_bad_sof'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(18)
+# ** at ../tb/pkt_seq_item.sv(18): (vlog-2730) Undefined variable: 'inject_bad_sof'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(18)
+# ** at ../tb/pkt_seq_item.sv(18): (vlog-2730) Undefined variable: 'inject_bad_sof'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(18)
+# ** at ../tb/pkt_seq_item.sv(18): (vlog-2730) Undefined variable: 'inject_bad_sof'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(19)
+# ** at ../tb/pkt_seq_item.sv(19): (vlog-2730) Undefined variable: 'inject_bad_len'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(19)
+# ** at ../tb/pkt_seq_item.sv(19): (vlog-2730) Undefined variable: 'inject_bad_len'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(19)
+# ** at ../tb/pkt_seq_item.sv(19): (vlog-2730) Undefined variable: 'inject_bad_len'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(19)
+# ** at ../tb/pkt_seq_item.sv(19): (vlog-2730) Undefined variable: 'inject_bad_len'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(19)
+# ** at ../tb/pkt_seq_item.sv(19): (vlog-2730) Undefined variable: 'inject_bad_len'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(19)
+# ** at ../tb/pkt_seq_item.sv(19): (vlog-2730) Undefined variable: 'inject_bad_len'.
+# ** Error: ** while parsing macro expansion: 'uvm_field_int' starting at ../tb/pkt_seq_item.sv(19)
+# ** at ../tb/pkt_seq_item.sv(19): (vlog-2730) Undefined variable: 'inject_bad_len'.
+# End time: 17:11:16 on Jun 20,2026, Elapsed time: 0:00:01
+# Errors: 56, Warnings: 0
+# C:/intelFPGA/23.1std/questa_fse/win64/vlog failed.
+vlog -sv +incdir+$env(UVM_HOME)/src ../tb/pkt_seq_item.sv ../tb/pkt_driver.sv ../tb/pkt_monitor.sv ../tb/pkt_scoreboard.sv ../tb/pkt_agent.sv ../tb/pkt_env.sv ../tb/pkt_sequences.sv ../tb/pkt_coverage.sv ../tb/pkt_test.sv ../tb/tb_top.sv
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 17:13:28 on Jun 20,2026
+# vlog -reportprogress 300 -sv "+incdir+C:/intelFPGA/23.1std/questa_fse/verilog_src/uvm-1.2/src" ../tb/pkt_seq_item.sv ../tb/pkt_driver.sv ../tb/pkt_monitor.sv ../tb/pkt_scoreboard.sv ../tb/pkt_agent.sv ../tb/pkt_env.sv ../tb/pkt_sequences.sv ../tb/pkt_coverage.sv ../tb/pkt_test.sv ../tb/tb_top.sv 
+# -- Compiling package pkt_seq_item_sv_unit
+# -- Importing package uvm_pkg (uvm-1.2 Built-in)
+# -- Importing package packet_pkg
+# ** Error: ../tb/pkt_driver.sv(9): (vlog-2730) Undefined variable: 'pkt_seq_item'.
+# ** Error: (vlog-13069) ../tb/pkt_driver.sv(26): near ";": syntax error, unexpected ';', expecting '('.
+# ** Error: ../tb/pkt_driver.sv(30): Illegal declaration after the statement near line '26'.  Declarations must precede statements.  Look for stray semicolons.
+# ** Error: ../tb/pkt_monitor.sv(13): (vlog-2730) Undefined variable: 'pkt_seq_item'.
+# ** Error: (vlog-13069) ../tb/pkt_monitor.sv(28): near ";": syntax error, unexpected ';', expecting '('.
+# ** Error: ../tb/pkt_monitor.sv(36): (vlog-2730) Undefined variable: 'obs'.
+# ** Error: ../tb/pkt_monitor.sv(36): (vlog-2164) Class or package 'pkt_seq_item' not found.
+# ** Error: (vlog-13069) ../tb/pkt_monitor.sv(36): near "::": syntax error, unexpected ::, expecting ';'.
+# ** Error: ../tb/pkt_scoreboard.sv(11): (vlog-2730) Undefined variable: 'pkt_seq_item'.
+# ** Error: ../tb/pkt_scoreboard.sv(34): (vlog-2400) Identifier ('pkt_seq_item') found where a type or type identifier is required.
+# ** Error: ../tb/pkt_agent.sv(13): (vlog-2730) Undefined variable: 'pkt_seq_item'.
+# ** Error: ../tb/pkt_sequences.sv(9): (vlog-2730) Undefined variable: 'pkt_seq_item'.
+# ** Error: (vlog-13069) ../tb/pkt_sequences.sv(26): near ";": syntax error, unexpected ';', expecting '('.
+# ** Error: ../tb/pkt_sequences.sv(28): (vlog-2730) Undefined variable: 'item'.
+# ** Error: ../tb/pkt_sequences.sv(28): (vlog-2164) Class or package 'pkt_seq_item' not found.
+# ** Error: (vlog-13069) ../tb/pkt_sequences.sv(28): near "::": syntax error, unexpected ::, expecting ';'.
+# ** Error: (vlog-13069) ../tb/pkt_sequences.sv(50): near ";": syntax error, unexpected ';', expecting '('.
+# ** Error: ../tb/pkt_sequences.sv(52): (vlog-2730) Undefined variable: 'item'.
+# ** Error: ../tb/pkt_sequences.sv(52): (vlog-2164) Class or package 'pkt_seq_item' not found.
+# ** Error: (vlog-13069) ../tb/pkt_sequences.sv(52): near "::": syntax error, unexpected ::, expecting ';'.
+# ** Error: (vlog-13069) ../tb/pkt_sequences.sv(74): near ";": syntax error, unexpected ';', expecting '('.
+# ** Error: ../tb/pkt_sequences.sv(76): (vlog-2730) Undefined variable: 'item'.
+# ** Error: ../tb/pkt_sequences.sv(76): (vlog-2164) Class or package 'pkt_seq_item' not found.
+# ** Error: (vlog-13069) ../tb/pkt_sequences.sv(76): near "::": syntax error, unexpected ::, expecting ';'.
+# ** Error: (vlog-13069) ../tb/pkt_sequences.sv(98): near ";": syntax error, unexpected ';', expecting '('.
+# ** Error: ../tb/pkt_sequences.sv(100): (vlog-2730) Undefined variable: 'item'.
+# ** Error: ../tb/pkt_sequences.sv(100): (vlog-2164) Class or package 'pkt_seq_item' not found.
+# ** Error: (vlog-13069) ../tb/pkt_sequences.sv(100): near "::": syntax error, unexpected ::, expecting ';'.
+# ** Error: (vlog-13069) ../tb/pkt_sequences.sv(121): near ";": syntax error, unexpected ';', expecting '('.
+# ** Error: ../tb/pkt_sequences.sv(124): (vlog-2730) Undefined variable: 'item'.
+# ** Error: ../tb/pkt_sequences.sv(124): (vlog-2164) Class or package 'pkt_seq_item' not found.
+# ** Error: (vlog-13069) ../tb/pkt_sequences.sv(124): near "::": syntax error, unexpected ::, expecting ';'.
+# ** Error: ../tb/pkt_sequences.sv(135): (vlog-2164) Class or package 'pkt_seq_item' not found.
+# ** Error: (vlog-13069) ../tb/pkt_sequences.sv(135): near "::": syntax error, unexpected ::, expecting ';'.
+# ** Error: ../tb/pkt_coverage.sv(9): (vlog-2730) Undefined variable: 'pkt_seq_item'.
+# ** Error: ../tb/pkt_coverage.sv(12): Invalid type 'pkt_seq_item'. Please check the type of the variable 'item'.
+# ** Error: ../tb/pkt_coverage.sv(48): (vlog-2400) Identifier ('pkt_seq_item') found where a type or type identifier is required.
+# End time: 17:13:29 on Jun 20,2026, Elapsed time: 0:00:01
+# Errors: 37, Warnings: 0
+# C:/intelFPGA/23.1std/questa_fse/win64/vlog failed.
+vlog -sv +incdir+$env(UVM_HOME)/src ../tb/pkt_seq_item.sv
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 17:14:59 on Jun 20,2026
+# vlog -reportprogress 300 -sv "+incdir+C:/intelFPGA/23.1std/questa_fse/verilog_src/uvm-1.2/src" ../tb/pkt_seq_item.sv 
+# -- Compiling package pkt_seq_item_sv_unit
+# -- Importing package uvm_pkg (uvm-1.2 Built-in)
+# -- Importing package packet_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 17:15:00 on Jun 20,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vlog -sv +incdir+$env(UVM_HOME)/src ../tb/pkt_driver.sv
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 17:15:12 on Jun 20,2026
+# vlog -reportprogress 300 -sv "+incdir+C:/intelFPGA/23.1std/questa_fse/verilog_src/uvm-1.2/src" ../tb/pkt_driver.sv 
+# ** Error: ../tb/pkt_driver.sv(9): (vlog-2730) Undefined variable: 'pkt_seq_item'.
+# ** Error: (vlog-13069) ../tb/pkt_driver.sv(26): near ";": syntax error, unexpected ';', expecting '('.
+# ** Error: ../tb/pkt_driver.sv(30): Illegal declaration after the statement near line '26'.  Declarations must precede statements.  Look for stray semicolons.
+# End time: 17:15:12 on Jun 20,2026, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+# C:/intelFPGA/23.1std/questa_fse/win64/vlog failed.
+vlog -sv -mfcu +incdir+$env(UVM_HOME)/src ../tb/pkt_seq_item.sv ../tb/pkt_driver.sv ../tb/pkt_monitor.sv ../tb/pkt_scoreboard.sv ../tb/pkt_agent.sv ../tb/pkt_env.sv ../tb/pkt_sequences.sv ../tb/pkt_coverage.sv ../tb/pkt_test.sv ../tb/tb_top.sv
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 17:16:54 on Jun 20,2026
+# vlog -reportprogress 300 -sv -mfcu "+incdir+C:/intelFPGA/23.1std/questa_fse/verilog_src/uvm-1.2/src" ../tb/pkt_seq_item.sv ../tb/pkt_driver.sv ../tb/pkt_monitor.sv ../tb/pkt_scoreboard.sv ../tb/pkt_agent.sv ../tb/pkt_env.sv ../tb/pkt_sequences.sv ../tb/pkt_coverage.sv ../tb/pkt_test.sv ../tb/tb_top.sv 
+# -- Compiling package pkt_seq_item_sv_unit
+# -- Importing package uvm_pkg (uvm-1.2 Built-in)
+# -- Importing package packet_pkg
+# -- Compiling module tb_top
+# 
+# Top level modules:
+# 	tb_top
+# End time: 17:16:54 on Jun 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -sv_seed random +UVM_TESTNAME=pkt_full_test +UVM_VERBOSITY=UVM_MEDIUM tb_top
+# vsim -sv_seed random "+UVM_TESTNAME=pkt_full_test" "+UVM_VERBOSITY=UVM_MEDIUM" tb_top 
+# Start time: 17:18:15 on Jun 20,2026
+# Loading C:/Users/saadk/AppData/Local/Temp\saadk@SAAD_dpi_24936\win64_gcc-7.4.0\export_tramp.dll
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error: ../tb/tb_top.sv(16): Module 'parser_if' is not defined.
+#  For instance 'dut_if' at path 'tb_top'
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=0.
+# Error loading design
+# End time: 17:18:21 on Jun 20,2026, Elapsed time: 0:00:06
+# Errors: 1, Warnings: 2
+vlog -sv -mfcu +incdir+$env(UVM_HOME)/src ../tb/pkt_seq_item.sv ../tb/pkt_driver.sv ../tb/pkt_monitor.sv ../tb/pkt_scoreboard.sv ../tb/pkt_agent.sv ../tb/pkt_env.sv ../tb/pkt_sequences.sv ../tb/pkt_coverage.sv ../tb/pkt_test.sv ../tb/tb_top.sv
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 17:20:47 on Jun 20,2026
+# vlog -reportprogress 300 -sv -mfcu "+incdir+C:/intelFPGA/23.1std/questa_fse/verilog_src/uvm-1.2/src" ../tb/pkt_seq_item.sv ../tb/pkt_driver.sv ../tb/pkt_monitor.sv ../tb/pkt_scoreboard.sv ../tb/pkt_agent.sv ../tb/pkt_env.sv ../tb/pkt_sequences.sv ../tb/pkt_coverage.sv ../tb/pkt_test.sv ../tb/tb_top.sv 
+# -- Compiling package pkt_seq_item_sv_unit
+# -- Importing package uvm_pkg (uvm-1.2 Built-in)
+# -- Importing package packet_pkg
+# -- Compiling module tb_top
+# 
+# Top level modules:
+# 	tb_top
+# End time: 17:20:48 on Jun 20,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vsim -sv_seed random +UVM_TESTNAME=pkt_full_test +UVM_VERBOSITY=UVM_MEDIUM tb_top
+# vsim -sv_seed random "+UVM_TESTNAME=pkt_full_test" "+UVM_VERBOSITY=UVM_MEDIUM" tb_top 
+# Start time: 17:20:56 on Jun 20,2026
+# Loading C:/Users/saadk/AppData/Local/Temp\saadk@SAAD_dpi_27088\win64_gcc-7.4.0\export_tramp.dll
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vsim-8785) UVM-aware debugging capabilities will be disabled since no compiled "questa_uvm_pkg" can be found.
+# This also means that later if you turn on UVM-aware debugging your debug simulations may have
+# different random seeds from your non-debug simulations.
+# Loading sv_std.std
+# Loading work.packet_pkg(fast)
+# Loading work.crc16_sv_unit(fast)
+# Loading work.packet_parser_sv_unit(fast)
+# Loading work.parser_interface_sv_unit(fast)
+# Loading work.parser_interface(fast)
+# Loading work.uvm_pkg(fast)
+# Loading work.pkt_seq_item_sv_unit(fast)
+# Loading work.tb_top(fast)
+# ** Error (suppressible): (vsim-3009) [TSCALE] - Module 'parser_interface' does not have a timeunit/timeprecision specification in effect, but other modules do.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_top/dut_if File: ../tb/parser_interface.sv
+# Error loading design
+# End time: 17:21:00 on Jun 20,2026, Elapsed time: 0:00:04
+# Errors: 1, Warnings: 0
+vlog -sv -mfcu +incdir+$env(UVM_HOME)/src ../tb/pkt_seq_item.sv ../tb/pkt_driver.sv ../tb/pkt_monitor.sv ../tb/pkt_scoreboard.sv ../tb/pkt_agent.sv ../tb/pkt_env.sv ../tb/pkt_sequences.sv ../tb/pkt_coverage.sv ../tb/pkt_test.sv ../tb/tb_top.sv
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 17:22:38 on Jun 20,2026
+# vlog -reportprogress 300 -sv -mfcu "+incdir+C:/intelFPGA/23.1std/questa_fse/verilog_src/uvm-1.2/src" ../tb/pkt_seq_item.sv ../tb/pkt_driver.sv ../tb/pkt_monitor.sv ../tb/pkt_scoreboard.sv ../tb/pkt_agent.sv ../tb/pkt_env.sv ../tb/pkt_sequences.sv ../tb/pkt_coverage.sv ../tb/pkt_test.sv ../tb/tb_top.sv 
+# -- Compiling package pkt_seq_item_sv_unit
+# -- Importing package uvm_pkg (uvm-1.2 Built-in)
+# -- Importing package packet_pkg
+# -- Compiling module tb_top
+# 
+# Top level modules:
+# 	tb_top
+# End time: 17:22:38 on Jun 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -sv +incdir+$env(UVM_HOME)/src ../tb/parser_interface.sv
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 17:22:56 on Jun 20,2026
+# vlog -reportprogress 300 -sv "+incdir+C:/intelFPGA/23.1std/questa_fse/verilog_src/uvm-1.2/src" ../tb/parser_interface.sv 
+# -- Compiling package parser_interface_sv_unit
+# -- Importing package packet_pkg
+# -- Compiling interface parser_interface
+# 
+# Top level modules:
+# 	--none--
+# End time: 17:22:56 on Jun 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -sv -mfcu +incdir+$env(UVM_HOME)/src ../tb/pkt_seq_item.sv ../tb/pkt_driver.sv ../tb/pkt_monitor.sv ../tb/pkt_scoreboard.sv ../tb/pkt_agent.sv ../tb/pkt_env.sv ../tb/pkt_sequences.sv ../tb/pkt_coverage.sv ../tb/pkt_test.sv ../tb/tb_top.sv
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 17:23:27 on Jun 20,2026
+# vlog -reportprogress 300 -sv -mfcu "+incdir+C:/intelFPGA/23.1std/questa_fse/verilog_src/uvm-1.2/src" ../tb/pkt_seq_item.sv ../tb/pkt_driver.sv ../tb/pkt_monitor.sv ../tb/pkt_scoreboard.sv ../tb/pkt_agent.sv ../tb/pkt_env.sv ../tb/pkt_sequences.sv ../tb/pkt_coverage.sv ../tb/pkt_test.sv ../tb/tb_top.sv 
+# -- Compiling package pkt_seq_item_sv_unit
+# -- Importing package uvm_pkg (uvm-1.2 Built-in)
+# -- Importing package packet_pkg
+# -- Compiling module tb_top
+# 
+# Top level modules:
+# 	tb_top
+# End time: 17:23:28 on Jun 20,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vsim -sv_seed random +UVM_TESTNAME=pkt_full_test +UVM_VERBOSITY=UVM_MEDIUM tb_top
+# vsim -sv_seed random "+UVM_TESTNAME=pkt_full_test" "+UVM_VERBOSITY=UVM_MEDIUM" tb_top 
+# Start time: 17:24:06 on Jun 20,2026
+# Loading C:/Users/saadk/AppData/Local/Temp\saadk@SAAD_dpi_12384\win64_gcc-7.4.0\export_tramp.dll
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vsim-8785) UVM-aware debugging capabilities will be disabled since no compiled "questa_uvm_pkg" can be found.
+# This also means that later if you turn on UVM-aware debugging your debug simulations may have
+# different random seeds from your non-debug simulations.
+# Loading sv_std.std
+# Loading work.packet_pkg(fast)
+# Loading work.crc16_sv_unit(fast)
+# Loading work.packet_parser_sv_unit(fast)
+# Loading work.parser_interface_sv_unit(fast)
+# Loading work.parser_interface(fast)
+# Loading work.uvm_pkg(fast)
+# Loading work.pkt_seq_item_sv_unit(fast)
+# Loading work.tb_top(fast)
+# ** Warning: (vsim-8441) Clocking block output vif.driver_cb.rst_n is not legal in this
+# or another expression.
+#    Time: 0 ps  Iteration: 0  Region: /pkt_seq_item_sv_unit::pkt_driver File: ../tb/pkt_driver.sv Line: 35
+# Compiling C:/Users/saadk/AppData/Local/Temp\saadk@SAAD_dpi_12384\win64_gcc-7.4.0\exportwrapper.c
+# Loading C:/Users/saadk/AppData/Local/Temp\saadk@SAAD_dpi_12384\win64_gcc-7.4.0\vsim_auto_compile.dll
+# ** Warning: (vsim-3770) Failed to find user specified function 'uvm_dpi_get_next_arg_c' in DPI C/C++ source files.
+#    Time: 0 ps  Iteration: 0  Region: /uvm_pkg File: C:/intelFPGA/23.1std/questa_fse/verilog_src/uvm-1.2/src/uvm_pkg.sv
+# ** Warning: (vsim-3770) Failed to find user specified function 'uvm_dpi_get_tool_name_c' in DPI C/C++ source files.
+#    Time: 0 ps  Iteration: 0  Region: /uvm_pkg File: C:/intelFPGA/23.1std/questa_fse/verilog_src/uvm-1.2/src/uvm_pkg.sv
+# ** Warning: (vsim-3770) Failed to find user specified function 'uvm_dpi_get_tool_version_c' in DPI C/C++ source files.
+#    Time: 0 ps  Iteration: 0  Region: /uvm_pkg File: C:/intelFPGA/23.1std/questa_fse/verilog_src/uvm-1.2/src/uvm_pkg.sv
+# ** Warning: (vsim-3770) Failed to find user specified function 'uvm_dpi_regcomp' in DPI C/C++ source files.
+#    Time: 0 ps  Iteration: 0  Region: /uvm_pkg File: C:/intelFPGA/23.1std/questa_fse/verilog_src/uvm-1.2/src/uvm_pkg.sv
+# ** Warning: (vsim-3770) Failed to find user specified function 'uvm_dpi_regexec' in DPI C/C++ source files.
+#    Time: 0 ps  Iteration: 0  Region: /uvm_pkg File: C:/intelFPGA/23.1std/questa_fse/verilog_src/uvm-1.2/src/uvm_pkg.sv
+# ** Warning: (vsim-3770) Failed to find user specified function 'uvm_dpi_regfree' in DPI C/C++ source files.
+#    Time: 0 ps  Iteration: 0  Region: /uvm_pkg File: C:/intelFPGA/23.1std/questa_fse/verilog_src/uvm-1.2/src/uvm_pkg.sv
+# ** Warning: (vsim-3770) Failed to find user specified function 'uvm_dump_re_cache' in DPI C/C++ source files.
+#    Time: 0 ps  Iteration: 0  Region: /uvm_pkg File: C:/intelFPGA/23.1std/questa_fse/verilog_src/uvm-1.2/src/uvm_pkg.sv
+# ** Warning: (vsim-3770) Failed to find user specified function 'uvm_glob_to_re' in DPI C/C++ source files.
+#    Time: 0 ps  Iteration: 0  Region: /uvm_pkg File: C:/intelFPGA/23.1std/questa_fse/verilog_src/uvm-1.2/src/uvm_pkg.sv
+# ** Error: Failure to checkout svverification license feature.
+# ** Error: (vsim-1) Unable to checkout verification license - required for testbench features (randomize, randcase, randsequence, covergroup).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_top File: ../tb/tb_top.sv
+# Error loading design
+# End time: 17:24:10 on Jun 20,2026, Elapsed time: 0:00:04
+# Errors: 2, Warnings: 9
