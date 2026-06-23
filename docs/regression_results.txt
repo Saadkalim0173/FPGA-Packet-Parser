@@ -1,0 +1,84 @@
+Packet Parser UVM Regression Results
+====================================
+
+Simulator
+---------
+Tool: Synopsys VCS
+Version: X-2025.06-SP1_Full64
+UVM Version: UVM-1.2.Synopsys
+Top-Level Module: tb_top
+Test Name: pkt_full_test
+Timescale: 1 ns / 1 ps
+
+Compilation / Elaboration
+-------------------------
+Status: PASS
+
+Compiled design/testbench units included:
+- packet_pkg
+- packet_parser
+- parser_interface
+- tb_top
+- UVM package and verification components
+
+Relevant compile notes:
+- Package wildcard import notes were reported but did not block compilation.
+- VCD interface dumping warning was reported; simulation still completed successfully.
+
+Simulation
+----------
+Status: PASS
+
+The UVM full test executed successfully:
+
+UVM_INFO @ 0: reporter [RNTST] Running test pkt_full_test...
+
+Scoreboard Results
+------------------
+===== SCOREBOARD SUMMARY =====
+Total number of packets: 167
+PASS: 167
+FAIL: 0
+CRC error: 124
+===================================
+
+UVM_INFO testbench.sv(363) @ 1155245000:
+uvm_test_top.env.scoreboard [SB] TEST PASSED
+
+Functional Coverage
+-------------------
+Functional Coverage: 89.33%
+
+Coverage was collected across:
+- Packet types
+- CRC-error injection paths
+- Malformed-packet scenarios
+- Payload-length boundary conditions
+- Protocol and transaction behavior
+
+Remaining known coverage gaps:
+- Payload-length range distribution
+- valid/ready backpressure and transactional handshake scenarios
+
+UVM Report Summary
+------------------
+UVM_INFO    : 130
+UVM_WARNING : 14
+UVM_ERROR   : 0
+UVM_FATAL   : 0
+
+Warnings
+--------
+Some malformed payload-length cases were intentionally exercised during negative testing.
+
+Example warning:
+PKT #161: payload_len=1013 OUT OF RANGE
+(DUT let a malformed packet through)
+
+These warnings were useful for identifying remaining protocol-handling and malformed-packet coverage gaps.
+
+Simulation Report
+-----------------
+Simulation time: 1155245000 ps
+CPU time: 1.350 seconds
+Final status: TEST PASSED
